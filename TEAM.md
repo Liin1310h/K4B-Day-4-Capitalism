@@ -12,9 +12,9 @@
 
 ## Thành viên
 
-| Họ và tên          | MSSV        | GitHub | Vai trò và công việc | File/commit/PR |
-| ------------------ | ----------- | ------ | -------------------- | -------------- |
-| Phạm Thị Thùy Linh | 2A202602909 |        |                      |                |
+| Họ và tên          | MSSV        | GitHub     | Vai trò và công việc | File/commit/PR |
+| ------------------ | ----------- | ---------- | -------------------- | -------------- |
+| Phạm Thị Thùy Linh | 2A202602909 | Liine1310h |                      |                |
 
 ## Nhận xét chung
 
