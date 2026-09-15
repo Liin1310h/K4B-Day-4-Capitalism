@@ -32,3 +32,11 @@
 - Điều đã học: Tool description và schema ảnh hưởng trực tiếp tới argument accuracy, không chỉ việc chọn đúng tool. Khi sửa prompt cần đọc actual tool trace để phân biệt lỗi routing, lỗi tham số và lỗi boundary; không được dùng câu trả lời nghe hợp lý làm bằng chứng duy nhất.
 - AI/công cụ đã dùng và cách kiểm tra: Dùng VS Code/Copilot để đọc `chiaviec.md`, registry và các `TOOL.md`, chỉnh artifact bằng patch; dùng evaluator với OpenAI `gpt-4o-mini`; kiểm tra YAML parse, đối chiếu `TOOL_FUNCTIONS`, kiểm tra `provider_error_cases == 0`, `measured_cases == total_cases`, hash artifact và đường dẫn run trong `version_log.csv`.
 - Thời điểm đã tự nộp URL repo chung trên VLearn: 01:14 16/09/2026
+
+### Nguyễn Thùy Linh — 2A202602497
+
+- Phần việc và file/commit/PR: Phụ trách Evaluation và version evidence. Chịu trách nhiệm trích xuất, phân tích dữ liệu chạy từ các file run JSON trong `starter_v0/runs/` để xây dựng và duy trì hai artifact bằng chứng chính là `[run-analysis.csv](starter_v0/run-analysis.csv)` và `[version_log.csv](starter_v0/artifacts/version_log.csv)`. Commit riêng cho phần bằng chứng: `33ef289`.
+- Quyết định, khó khăn và cách xử lý: Xử lý triệt để xung đột dữ liệu và lệch nhãn version giữa các file run rác và file run OpenAI chuẩn (từ v0 đến v3). Đã dùng script kết hợp PowerShell chuẩn hóa dữ liệu 120 case (30 case/phiên bản), đảm bảo trích xuất chính xác 100% các giá trị `artifact_version`, `prompt_hash`, `tools_hash` và tỉ lệ `metric_after` từ v0 (73.33%) nâng dần lên v3 (100%).
+- Điều đã học: Hiểu rõ tầm quan trọng của việc đóng gói dữ liệu minh bạch (traceability) trong phát triển Agent. Nhận diện được các Failure Modes (wrong_tool, wrong_boundary, missing_info) thay đổi ra sao qua từng phiên bản prompt/tool contract.
+- AI/công cụ đã dùng và cách kiểm tra: Dùng VS Code Terminal (PowerShell), Python script `parse_runs.py` và `Import-Csv` để kiểm tra gom nhóm dữ liệu (`Group-Object version,passed`); đối chiếu trực tiếp hash và đường dẫn run trong `version_log.csv`.
+- Thời điểm đã tự nộp URL repo chung trên VLearn: 03:30 16/09/2026
