@@ -4,7 +4,7 @@
 
 ## Thông tin bài nộp
 
-- Tên nhóm:
+- Tên nhóm: Capitalism
 - Người đại diện / MSSV:
 - Tên repo: `K4-L3-DAY04-HoVaTen-MSSV-PromptEngineeringToolCalling`
 - URL repo, nhánh nộp, commit chốt:
@@ -12,9 +12,9 @@
 
 ## Thành viên
 
-| Họ và tên | MSSV | GitHub | Vai trò và công việc | File/commit/PR |
-|---|---|---|---|---|
-| | | | | |
+| Họ và tên          | MSSV        | GitHub | Vai trò và công việc | File/commit/PR |
+| ------------------ | ----------- | ------ | -------------------- | -------------- |
+| Phạm Thị Thùy Linh | 2A202602909 |        |                      |                |
 
 ## Nhận xét chung
 
