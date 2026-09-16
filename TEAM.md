@@ -12,8 +12,8 @@
 
 ## Thành viên
 
-| Họ và tên          | MSSV        | GitHub     | Vai trò và công việc                                                                                                     | File/commit/PR                                                                                                                                                    |
-| ------------------ | ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Họ và tên          | MSSV        | GitHub     | Vai trò và công việc                                                                                           | File/commit/PR                                                                                                                                                    |
+| ------------------ | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Phạm Thị Thùy Linh | 2A202602909 | Liine1310h | Prompt và tool contract: cải thiện system prompt, tool schema, routing, clarification và confirmation boundary | [system_prompt.md](starter_v0/artifacts/system_prompt.md), [tools.yaml](starter_v0/artifacts/tools.yaml), [version_log.csv](starter_v0/artifacts/version_log.csv) |
 
 | Bùi Quốc Việt | 2A202602884 | vietbui000 | Chạy adversarial suite; Review đủ 12 case; Kiểm tra `create_ticket`; Kiểm tra `search_device_info`; Kiểm tra `search_kb` và `policy`
@@ -44,7 +44,9 @@
 - Thời điểm đã tự nộp URL repo chung trên VLearn: 03:30 16/09/2026
 
 ### Bùi Quốc Việt — 2A202602884
-- Phần việc và file/commit/PR: Tôi phụ trách Safety và Tool Implementation: kiểm tra 12 case adversarial, rà soát xác nhận tạo ticket, credential, dữ liệu nội bộ gửi ra web và injection trong nội dung truy xuất. Các file chính gồm agent.py, chat.py, tools/_shared.py, implementation của bốn tool liên quan, tests/test_safety.py và analysis/safety/PERSON3_SAFETY_REPORT.md. Commit/PR: bổ sung sau khi commit và tạo PR.
+
+- Phần việc và file/commit/PR: Tôi phụ trách Safety và Tool Implementation: kiểm tra 12 case adversarial, rà soát xác nhận tạo ticket, credential, dữ liệu nội bộ gửi ra web và injection trong nội dung truy xuất. Các file chính gồm agent.py, chat.py, tools/\_shared.py, implementation của bốn tool liên quan, tests/test_safety.py và analysis/safety/PERSON3_SAFETY_REPORT.md. Commit/PR: bổ sung sau khi commit và tạo PR.
 - Quyết định, khó khăn và cách xử lý: Chỉ sửa implementation khi probe/trace chứng minh lỗi ở execution hoặc tool boundary. Bổ sung xác nhận gắn với đúng payload, chặn credential và giới hạn truy vấn web vào danh mục sản phẩm công khai. Các run đầu gặp lỗi tool protocol và quota Groq; đã đổi model, giới hạn output và giãn nhịp request. Giữ nguyên ba case FAIL của run cuối, không sửa đáp án hoặc che lỗi để tăng điểm.
 - Điều đã học: Prompt hướng dẫn model chưa đủ để bảo vệ hành động ghi dữ liệu; execution phải kiểm tra quyền xác nhận độc lập. PASS về routing cũng chưa chứng minh an toàn, cần đối chiếu arguments, tool result và filesystem. Nội dung từ KB, policy và web chỉ là tài liệu tham khảo, không được cấp quyền thực thi.
 - AI/công cụ đã dùng và cách kiểm tra: Sử dụng Codex hỗ trợ phân tích code, đề xuất sửa lỗi, viết test và tổng hợp evidence; dùng Python unittest, Git và Groq để kiểm tra. Kết quả thực thi: 12/12 smoke test PASS; adversarial đo đủ 12 case, 0 lỗi provider, 9 PASS và 3 FAIL. Evidence có snapshot filesystem và hash implementation; không phát sinh ticket trong repo. Các giới hạn và lỗi còn lại được ghi trong báo cáo Người 3.
+- Thời điểm đã tự nộp URL repo chung trên VLearn: 07:42 16/09/2026
